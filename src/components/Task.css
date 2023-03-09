@@ -1,0 +1,120 @@
+.taskItem {
+	padding: 0px;
+	margin: 0px;
+	border-bottom: 1px solid var(--todo-border-color);;
+	padding: 15px;
+	padding-left: 0px;
+	cursor: pointer;
+	display: flex;
+	transition: all 0.3s;
+	-webkit-animation: upScale 0.6s;
+	animation: upScale 0.6s;
+}
+
+@keyframes upScale {
+	from {
+		-webkit-transform: scale(0);
+	}
+	to {
+		-webkit-transform: scale(1);
+	}
+}
+
+.taskItem:hover {
+	background: var(--todo-hover-color);;
+	transform: scale(1.005);
+}
+
+.taskItem:last-child {
+	border: none;
+}
+
+.taskItem-icon {
+	margin-right: 10px;
+}
+
+.taskItem-content {
+	position: relative;
+	display: inline-block;
+	flex-grow: 1;
+}
+
+.taskItem-options {
+	position: relative;
+	text-align: right;
+	flex-grow: 1;
+}
+
+.taskItem-options > button {
+	background-color: var(--todo-background-color);
+	border: 1px solid var(--todo-border-color);
+	text-align: center;
+	border-radius: 4px;
+	opacity: 0.6;
+	padding: 0;
+	width: 35px;
+	height: 35px;
+	transition: opacity 0.5s;
+	font-size: 20px;
+	margin-right: 2px;
+}
+
+.taskItem-options > button > svg {
+	pointer-events: none;
+	position: relative;
+	text-align: center;
+}
+
+.taskItem-options > button:hover {
+	opacity: 1;
+	transform: scale(1.1);
+}
+
+.checkButton {
+	color: #23c452;
+}
+
+.editButton {
+	color: #236fc4;
+}
+
+.deleteButton {
+	color: #d2210f;
+}
+
+.isCompleted {
+	color: #23c452;
+}
+
+.taskItem:has(.isCompleted) .taskItem-icon {
+	color: #23c452;
+}
+
+/* EDIT MODE */
+
+.taskItem.editTaskMode {
+	transform: scale(1.21);
+	background-color: var(--todo-background-color);
+	padding: 10px;
+	border: 1px solid var(--todo-border-color);
+	border-radius: 4px;
+	transition: all 0.6s;
+}
+
+.taskInput {
+	color: #236fc4;
+}
+
+/* DELETE TASK */
+
+.taskItem.remove {
+	transition: all 0.8s;
+	transform: scale(0);
+}
+
+.taskItem-date {
+	margin-top: 5px;
+	font-size: 12px;
+	padding: 0;
+	margin: 5px 0px 0px 0px;
+}

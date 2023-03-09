@@ -1,0 +1,81 @@
+.inputDesign {
+	width: 100%;
+	border-radius: 4px;
+	font-size: 16px;
+	border: 1px solid var(--todo-border-color);
+	color: var(--todo-text-color);
+	background-color: var(--todo-background-color);
+	height: 40px;
+	width: 100%;
+	transition: all 0.5s;
+}
+
+.inputDesign span {
+	margin-left: 10px;
+	margin-right: 10px;
+	opacity: 0.6;
+	position: relative;
+	width: 10%;
+	font-size: 20px;
+}
+
+.inputDesign:hover {
+	transform: scale(1.03);
+}
+
+input {
+	background: none;
+	border: none;
+	padding: 5px;
+	margin: 0px;
+	width: 70%;
+	color: var(--todo-text-color);
+	font-size: 18px;
+	position: relative;
+}
+
+input:focus {
+	border: none;
+	outline: none;
+}
+
+.inputDesign button {
+	position: relative;
+	border: none;
+	background-color: #278df5;
+	color: #fff;
+	height: 100%;
+	opacity: 0.8;
+	float: right;
+	transition: opacity 0.6s;
+	border-radius: 0px 4px 4px 0px;
+	padding: 5px;
+	font-weight: 600;
+	width: 20%;
+}
+
+@media screen and (max-width: 397px) {
+	input {
+		width: 40%;
+	}
+	.inputDesign button > svg {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 542px) {
+	input {
+		width: 50%;
+	}
+	.inputDesign button {
+		width: 30%;
+	}
+}
+
+@media screen and (max-width: 325px) {
+	.inputDesign button {
+		width: 60%;
+		margin-top: 10px;
+		border-radius: 4px;
+	}
+}
